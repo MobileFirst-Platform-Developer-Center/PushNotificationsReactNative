@@ -1,0 +1,58 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+  package="com.mfppushreactnative">
+
+     <uses-permission android:name="android.permission.INTERNET" />
+ <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+ <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <application
+    tools:replace="android:allowBackup"
+      android:name=".MainApplication"
+      android:label="@string/app_name"
+      android:icon="@mipmap/ic_launcher"
+      android:roundIcon="@mipmap/ic_launcher_round"
+      android:allowBackup="false"
+      android:theme="@style/AppTheme">
+      <activity
+        android:name=".MainActivity"
+        android:label="@string/app_name"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+        android:windowSoftInputMode="adjustResize">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+         <intent-filter>
+ <action android:name="com.mfppushreactnative.IBMPushNotification" />  
+ <category android:name="android.intent.category.DEFAULT" />
+ </intent-filter>
+      </activity>
+
+
+
+
+ <activity android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationHandler"
+ android:theme="@android:style/Theme.NoDisplay"/>
+
+ <!-- MFPPush Intent Service -->
+
+ <service android:exported="true" android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushIntentService">
+ <intent-filter>
+ <action android:name="com.google.firebase.MESSAGING_EVENT" />
+ </intent-filter>
+ </service>
+  
+ <service android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPush" android:exported="true">
+ <intent-filter>
+ <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+ </intent-filter>
+ </service>
+
+
+
+
+      <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+    </application>
+
+</manifest>

@@ -1,0 +1,29 @@
+{
+  "name": "MFPPushReactNative",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "16.8.3",
+    "react-native": "0.59.2",
+    "react-native-action-button": "^2.8.5",
+    "react-native-floating-action": "^1.20.0",
+    "react-native-ibm-mobilefirst": "^8.0.2019110405",
+    "react-native-ibm-mobilefirst-push": "^8.0.2019102104",
+    "react-native-vector-icons": "^6.6.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.8.4",
+    "@babel/runtime": "7.8.4",
+    "babel-jest": "25.1.0",
+    "jest": "25.1.0",
+    "metro-react-native-babel-preset": "0.58.0",
+    "react-test-renderer": "16.8.3"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

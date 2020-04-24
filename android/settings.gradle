@@ -1,0 +1,15 @@
+rootProject.name = 'MFPPushReactNative'
+include ':react-native-vector-icons'
+project(':react-native-vector-icons').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-vector-icons/android')
+include ':react-native-ibm-mobilefirst-push'
+project(':react-native-ibm-mobilefirst-push').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-ibm-mobilefirst-push/android')
+include ':react-native-ibm-mobilefirst'
+project(':react-native-ibm-mobilefirst').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-ibm-mobilefirst/android')
+
+include ':app'
+
+include ':react-native-bridge'
+project(':react-native-bridge').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-ibm-mobilefirst/android/react-native-bridge')
+
+include ':react-native-pushbridge'
+project(':react-native-pushbridge').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-ibm-mobilefirst-push/android/react-native-pushbridge')
