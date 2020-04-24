@@ -52,14 +52,13 @@ export default class App extends Component {
   }
 
   async componentDidMount() {
-    // return fetch("https://facebook.github.io/react-native/movies.json")
-    return fetch("https://api.myjson.com/bins/15rhwc")
+    return fetch("http://www.mocky.io/v2/5ea25fb03100002e8f1ef07e")
       .then(response => response.json())
       .then(responseJson => {
         this.setState(
           {
             isLoading: false,
-            dataSource: responseJson.movies
+            dataSource: responseJson.sports
           },
           function() {}
         );
@@ -173,13 +172,13 @@ export default class App extends Component {
     if (this.state.isLoading) {
       return (
         <View style={{ flex: 1, padding: 20 }}>
+        <Text> Fetching Latest Updates ....</Text>
           <ActivityIndicator size="large" />
         </View>
       );
     }
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Basic Example</Text>
 
         <FlatList
           data={this.state.dataSource}
@@ -188,8 +187,8 @@ export default class App extends Component {
             <View
               style={{
                 flexDirection: "row",
-                height: 100,
-                padding: 2
+                height: 120,
+                padding: 5
                 // fontWeight: bol
               }}
             >
