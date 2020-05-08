@@ -51,7 +51,7 @@ Checkout this link to know more: [Notifications - IBM Mobile Foundation Develope
 
   
 
-1. Get into the project directory: `cd MFPPushReactNative`
+1. Get into the project directory: `cd PushNotificationsReactNative`
 
 2. To add IBM MobileFirst&trade; Push capabilities to an existing React Native app, you add the react-native-ibm-mobilefirst & react-native-ibm-mobilefirst-push plug-in to your app. The react-native-ibm-mobilefirst plug-in contains the IBM MobileFirst Platform Foundation SDK and the react-native-ibm-mobilefirst-push contains all the APIs to work with Push Notifications.
 
